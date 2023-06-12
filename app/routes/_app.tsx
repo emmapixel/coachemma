@@ -13,7 +13,7 @@ export default function Layout() {
 
   return (
     <div>
-      <h1>Layout för alla sidor!</h1>
+      <h1 className="font-bold">Layout för alla sidor!</h1>
       <button onClick={() => navigate('/')}>Hem</button>
       <button onClick={() => navigate('book')}>Boka</button>
       <button onClick={() => navigate('clients')}>Klienter</button>
