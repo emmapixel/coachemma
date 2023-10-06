@@ -9,17 +9,17 @@ export const meta: V2_MetaFunction = () => {
 };
 
 export default function Layout() {
-  const navigate = useNavigate();
 
   return (
     <div>
-      <h1 className="font-bold">Layout för alla sidor!</h1>
-      <button onClick={() => navigate('/')}>Hem</button>
-      <button onClick={() => navigate('book')}>Boka</button>
-      <button onClick={() => navigate('clients')}>Klienter</button>
       <main>
         <Outlet />
       </main>
+      <footer>
+        <div className="bg-footer h-50 lg:h-50 w-full bg-cover bg-center p-10">
+          Copyright Emma Eriksson 2023 Coachemma.se | Developed By Emma Eriksson.
+        </div>
+      </footer>
     </div>
   );
 }
