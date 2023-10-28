@@ -1,5 +1,4 @@
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Index() {
@@ -11,42 +10,56 @@ export default function Index() {
             </div>
             <div className="bg-hero h-80 lg:h-96 w-full bg-cover bg-center p-24"></div>
             <article>
-                <div className="flex flex-col lg:flex-row border-solid border-[1.5px] border-black m-10 shadow-lg">
+                <div className="flex flex-col lg:flex-row lg:justify-between border-solid border-[1.5px] border-black m-10 shadow-lg">
                     <div className="lg:w-1/2 p-10">
-                        <h1 className="font-bold">About Me</h1>
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, hic autem? Reiciendis 
-                            veniam ex commodi rerum pariatur, in aliquid amet laudantium 
-                            consectetur quidem hic fugit fuga voluptas at modi delectus?
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt maiores beatae molestias reprehenderit fugit laboriosam quas repellat 
-                            sapiente iusto consequatur rerum ea, amet quia, dignissimos illum. Neque itaque nesciunt reiciendis.
+                        <h1 className="font-bold mb-2.5">About me and this website</h1>
+                        <p className="mb-5">
+                            My name is Emma, I live in Sweden and I have a deep passion for personal growth, mind work and happy living. 
+                            I believe that we all can turn our fears into strength so that we dare to make our dreams into reality,
+                            and create the life we want to live. Because we only have one life so why should we just
+                            continue the "normal life" when we can do so much more! When we can make sure that there is 
+                            no regrets in the end of our lives.
                         </p>
+                        <p className="mb-5">
+                            In 2021 I went on to become a lifecoach to make sure I work on myself and on my life. 
+                            It is an important job and I believe that everyone can benefit from taking some time
+                            to reflect and work on improving their own. Right now I am offering free 
+                            30 minutes coaching sessions. If you are interested scroll down to see how to contact me.
+                        </p>
+                        <p>
+                            We live a fast and busy life and now we need the time to reflect more than ever.
+                            I hope I hear from you. 
+                        </p>
+                        
                     </div>
-                    <div className="lg:w-1/2 p-10">
-                        <img src="./images/Coachemma.se.png" alt="Logotype Coachemma.se"></img>
+                    <div className="p-10">
+                        <img src="./images/Me.jpg" alt="A picture of me" width={450}></img>
                     </div>
                 </div>
             </article>
             <article>
                 <div className="p-10">
-                    <h1 className="font-bold">Contact Me</h1>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, hic autem? Reiciendis 
-                        veniam ex commodi rerum pariatur, in aliquid amet laudantium 
-                        consectetur quidem hic fugit fuga voluptas at modi delectus?
+                    <h1 className="font-bold mb-2.5">Get in contact</h1>
+                    <p className="mb-5">
+                        If you want to book a free 30 minutes coaching session just send me an email, or a direct message 
+                        on message on instagram or facebook. 
                     </p>
-                    <div className="flex space-x-8 mt-2">
+                    <p className="mb-5">
+                        You deserve to take some time for yourself. Have an amazing day!
+                    </p>
+                    <div className="flex flex-col space-x-8 mt-2">
                         <div className="flex flex-col justify-center">
-                            <p className="font-medium- mb-1">Email</p>
-                            <FontAwesomeIcon className="hover:animate-bounce" icon={faEnvelope} />
+                            <p className="font-medium- mb-2.5">Email: coachemma.se@gmail.com</p>
                         </div>
-                        <div className="flex flex-col justify-center">
-                            <p className="font-medium mb-1">Facebook</p>
-                            <FontAwesomeIcon className="hover:animate-bounce" icon={faFacebook} />
-                        </div>
-                        <div className="flex flex-col justify-center">
-                            <p className="font-medium mb-1">Instagram</p>
-                            <FontAwesomeIcon className="hover:animate-bounce" icon={faInstagram} />
+                        <div className="flex space-x-8 mt-2">
+                            <div className="flex flex-col justify-center">
+                                <p className="font-medium mb-1">Facebook</p>
+                                <a href="https://www.facebook.com/coachemma.se"><FontAwesomeIcon className="hover:animate-bounce" icon={faFacebook} /></a>
+                            </div>
+                            <div className="flex flex-col justify-center">
+                                <p className="font-medium mb-1">Instagram</p>
+                                <a href="https://www.instagram.com/coachemma.se/"><FontAwesomeIcon className="hover:animate-bounce" icon={faInstagram} /></a>
+                            </div>
                         </div>
                     </div>
                 </div>
