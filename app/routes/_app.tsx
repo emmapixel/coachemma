@@ -12,40 +12,46 @@ export const loader: LoaderFunction = async ({ request }) => {
 export default function Layout() {
   const { user } = useLoaderData();
   return (
-    <div>
-      <nav className="w-full">
-        <div className="bg-clam-shell w-full py-2 px-10">
-          <p className="text-white">coachemma.se@gmail.com</p>
-        </div>
-        <div
-          className="bg-white w-full py-4 px-20 flex justify-between">
-          <Link className= "text-3xl font-bold" to={"/"}>Coachemma</Link>
-          <div className="flex flex-row items-center justify-between gap-x-4">
-            {
-              user ? (
-                <>
-                  <Link to={"new-quote"}>Add A Quote</Link>
-
-                  <form action="/logout" method="post">
-                    <button type="submit" className="button">
-                      Logout
-                    </button>
-                  </form>
-                </>) : (
-                <>
-                  <Link to={"login"}>Login</Link>
-                  <Link to={"login"}>Register</Link>
-                </>
-              )
-            }
-
+    <div className="flex flex-col min-h-screen">
+      <header>
+        <nav className="w-full">
+          <div className="bg-clam-shell w-full py-2 px-10">
+            <p className="text-white">coachemma.se@gmail.com</p>
           </div>
-        </div >
-      </nav >
+          <div
+            className="bg-white w-full py-4 px-20 flex justify-between">
+            <Link className= "text-3xl font-bold" to={"/"}>Coachemma</Link>
+            <div className="flex flex-row items-center justify-between gap-x-4">
+              {
+                user ? (
+                  <>
+                    <Link to={"new-quote"}>Add A Quote</Link>
 
-      <main>
+                    <form action="/logout" method="post">
+                      <button type="submit" className="button">
+                        Logout
+                      </button>
+                    </form>
+                  </>) : (
+                  <>
+                    <Link to={"login"}>Login</Link>
+                    <Link to={"login"}>Register</Link>
+                  </>
+                )
+              }
+
+            </div>
+          </div >
+        </nav >
+      </header>
+
+      <main className="flex-grow">
         <Outlet />
       </main>
+
+      <footer className="bg-clam-shell-lighter">
+        <p>© 2024 Coachemma</p>
+      </footer>      
     </div>
   )
 }
